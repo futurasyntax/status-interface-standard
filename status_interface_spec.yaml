@@ -1,0 +1,102 @@
+x-author: Riikka Jääskä
+x-date: 2025-10
+
+openapi: 3.0.0
+info:
+  title: Process Status Interface Standard for Public Service Transactions
+  version: "0.1"
+  description: |
+    An interface specification for transmitting status information from public sector digital services to a unified citizen-facing view.
+    Designed to provide clarity about whether a citizen or organization is expected to take action in a given administrative process.
+
+paths:
+  /status-update:
+    post:
+      summary: Submit a status update for a public service process
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+		authority_id:
+                  type: string
+                  description: National identifier of the authority
+		authority_name:
+                  type: string
+                  description: Descriptive authority name
+                service_id:
+                  type: string
+                  description: Identifier from a national service catalogue
+                service_name:
+                  type: string
+                  description: Descriptive service name
+                case_id:
+                  type: string
+                  description: Unique case identifier from the source system
+                user_id:
+                  type: string
+                  description: Person ID or organizational ID
+                status_type:
+                  type: string
+		  enum: [draft, received_by_authority, in_progress, response_required, resolved_by_authority, closed_by_user, reminder]
+                  description: Standardized status label
+                status_detail:
+                  type: string
+                  description: Optional authority-specific detail
+                process_type:
+                  type: string
+                  enum: [application_process, notification_process, inspection_process, event_triggered_process, periodic_review_process, passive_update_process]
+                  description: Standardized type of process
+                response_type:
+                  type: string
+                  enum: [mandatory, optional, informational]
+                  description: Indicates whether a user action is required
+                expected_action:
+                  type: string
+                  description: Short description of what user is expected to do (e.g., 'Submit requested documents')
+                deadline:
+                  type: string
+                  format: date-time
+                  description: Deadline for the required action, if applicable
+                consequence_if_no_action:
+                  type: string
+                  description: What will happen if no user action is taken
+                notification_channel:
+                  type: array
+                  items:
+                    type: string
+                    enum: [official_messaging_portal, messaging_portal, online_service_ui, paper_mail, email, sms, phone_call]
+                  description: Channels through which the authority has notified the user of this status update. Multiple values possible.
+                response_channel:
+                  type: array
+                  items:
+                    type: string
+                    enum: [official_messaging_portal, messaging_portal, online_service_ui, paper_mail, email, sms, phone_call]
+                  description: Channels through which the user is expected or allowed to respond to this status update. Multiple values possible.
+                notification_id:
+                  type: array
+                  items:
+		    type: string
+		  description: References to the related messages sent by the authority through the notification channels. Multiple values possible.
+                appeal_available:
+                  type: boolean
+                  description: Whether authority offers the user a possibility to appeal
+                timestamp:
+                  type: string
+                  format: date-time
+                  description: Time the status was generated
+                source_system:
+                  type: string
+                  description: Source system providing the status
+
+      responses:
+        '200':
+          description: Status update accepted
+        '400':
+          description: Invalid or missing fields
+        '403':
+          description: Unauthorized or invalid signature
+        '500':
+          description: Server error on receiving platform
