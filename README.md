@@ -1,5 +1,5 @@
 # status-interface-standard
-A draft standard for a unified status interface that allows public authorities to communicate process updates to citizens and organizations, including deadlines, required actions, and consequences of inaction.
+A draft standard for a unified process status interface that allows public authorities to communicate process updates to citizens and organizations, including deadlines, required actions, and consequences of inaction.
 
 \# Public Service Status Interface Standard (Draft)
 
@@ -70,7 +70,7 @@ With this standard, a citizen’s digital dashboard can show clear updates´, fo
 
 This way, the citizen always knows whether action is required, optional, or informational, across all services and authorities.
 
-\### Example JSON Message
+\### Example JSON Message - User has submitted an application for a passport
 
 ```json
 {
@@ -80,16 +80,17 @@ This way, the citizen always knows whether action is required, optional, or info
   "service_name": "Passport Application",
   "case_id": "PA-2025-000123",
   "user_id": "05111999A9555",
-  "status_type": "received_by_autohority",
+  "status_type": "received_by_authority",
   "status_detail": "Your passport application has been received.",
   "process_type": "application_process",
   "response_type": "informational",
   "expected_action": "Wait for an invitation to book an appointment",
   "deadline": "",
   "consequence_if_no_action": "",
-  "notification_channels": "online_service_ui",
-  "response_channels": ("online_service_ui", "paper_mail"),
-  "message_id": "0345834343",
+  "notification_channel": "online_service_ui",
+  "response_channel": ("online_service_ui", "paper_mail"),
+  "notification_id": "0345834343",
+  "appeal_available": "false"
   "timestamp": "2025-10-01T12:30:00Z",
   "source_system": "passport_service"
 }
