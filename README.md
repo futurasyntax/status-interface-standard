@@ -47,13 +47,31 @@ This standard defines a structured API and vocabulary to solve these problems.
 
 \## How to Contribute
 
-Feedback and issues are welcome! Please use the \*\*Issues\*\* tab in this repository to comment or propose improvements.
+Thank you for reading this draft proposal. I am especially interested in feedback that helps make the standard both useful for authorities and understandable for users.
+
+Please share your comments on:
+
+Clarity: Are the status types and examples understandable to non-experts?
+
+Usefulness: Would such a standard actually reduce confusion for citizens and organizations?
+
+Feasibility: From a technical or organizational perspective, what would be the main challenges in adopting this?
+
+Added value: In what kind of initiatives or contexts could this bring the most benefit?
+
+This kind of input will help me:
+
+Improve the draft so that it could realistically be implemented.
+
+Show where expertise like mine is most valuable for authorities, vendors, or researchers.
+
+Please use the \*\*Issues\*\* tab in this repository to comment or propose improvements. All feedback, small or large, is welcome.
 
 
+## License
 
-\## License
-
-MIT License (or Creative Commons Attribution 4.0, if you prefer)
+This work is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+See the [LICENSE](LICENSE) file for details.
 
 \## Citizen Perspective
 
@@ -62,7 +80,7 @@ Without a standardized status interface, citizens often face uncertainty:
 - Do I need to respond to a request, and what happens if I do not?
 - Which messages relate to which process?
 
-With this standard, a citizen’s digital dashboard can show clear updates´, for example:
+With this standard, a citizen’s digital dashboard can show clear updates, for example:
 
 - **Passport Application** – Received by Police Authority. Awaiting appointment booking.  
 - **Tax Clarification** – Awaiting user response. Response required by 15 Nov. If no action, estimated taxation will apply.  
