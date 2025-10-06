@@ -93,7 +93,10 @@ components:
             - passive_update_process
         response_type:
           type: string
-          enum: [mandatory, optional, informational]
+          enum: 
+		    - mandatory
+			- optional
+			- informational
         expected_action:
           type: string
         deadline:
