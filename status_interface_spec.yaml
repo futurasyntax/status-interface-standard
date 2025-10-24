@@ -1,5 +1,6 @@
 x-author: Riikka Jääskä
-x-date: 2025-10
+x-standard-version: 0.1
+x-date: 2025-10-24
 
 openapi: 3.0.0
 info:
