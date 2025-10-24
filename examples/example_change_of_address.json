@@ -1,0 +1,23 @@
+{
+  "title": "Change of Address Notification",
+  "description": "Example message showing a notification process where the user must provide missing details before the address change can be registered.",
+  "authority_id": "00234",
+  "authority_name": "Population Data Services Agency",
+  "service_id": "S092344",
+  "service_name": "Change of Address Notification",
+  "case_id": "2025000123",
+  "user_id": "010170-999A",
+  "status_type": "response_required",
+  "status_detail": "Additional details needed",
+  "process_type": "notification_process",
+  "response_type": "mandatory",
+  "expected_action": "Provide names and personal IDs of all household members",
+  "deadline": "2025-11-15",
+  "consequence_if_no_action": "Address change will not be registered",
+  "notification_channels": ["online_service_ui", "official_messaging_portal"],
+  "response_channels": ["online_service_ui", "paper_mail"],
+  "notification_id": "MSG-0045789",
+  "appeal_available": false,
+  "timestamp": "2025-10-03T09:45:00Z",
+  "source_system": "PopulationRegisterSystem"
+}
