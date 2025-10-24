@@ -1,0 +1,23 @@
+{
+  "title": "Corporate Tax Clarification Request",
+  "description": "Example message representing an application process where a company must provide missing receipts for its annual tax return.",
+  "authority_id": "0002034",
+  "authority_name": "Tax Administration",
+  "service_id": "S021121",
+  "service_name": "Corporate Annual Tax Return",
+  "case_id": "TAX-2025-98765",
+  "user_id": "YY12345678",
+  "status_type": "response_required",
+  "status_detail": "Additional information needed",
+  "process_type": "application_process",
+  "response_type": "mandatory",
+  "expected_action": "Upload PDF copies of receipts for travel expenses",
+  "deadline": "2025-11-01",
+  "consequence_if_no_action": "Tax return will be assessed unfavorably",
+  "notification_channels": ["online_service_ui", "paper_mail"],
+  "response_channels": ["online_service_ui", "paper_mail"],
+  "notification_id": "TAXMSG-2025-2222",
+  "appeal_available": false,
+  "timestamp": "2025-10-02T13:30:00Z",
+  "source_system": "TaxCaseManagement"
+}
