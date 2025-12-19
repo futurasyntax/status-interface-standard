@@ -4,8 +4,6 @@ Has it been received, is it being processed, or is action needed?
 
 This draft proposes a unified process status interface that allows public authorities to communicate process updates to citizens, organizations and other legal entities, including deadlines, required actions, and consequences of inaction.
 It is a simple, interoperable way for authorities to describe what stage a case has reached.  
-The aim is to make digital government more transparent, predictable, and trustworthy, not just digitalized bureaucracy.
-
 The goal is to make digital government more transparent, predictable, and trustworthy, not just digitalized bureaucracy.  
 
 Read the full draft specification (PDF): [Status_Interface_Standard_v0.1.pdf](Status_Interface_Standard_v0.1.pdf)  
